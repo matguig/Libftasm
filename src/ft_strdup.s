@@ -28,11 +28,10 @@ _ft_strdup:
 	call _malloc
 
 	mov rdi, rax
-	mov r14, rdi
 	mov rsi, r15
-	mov rdx, r12
-	call _ft_memcpy
-
+	mov rcx, r12
+	cld
+	rep movsb
 end:
 	leave
 	ret
